@@ -6,6 +6,7 @@ interface Props{
 
 export const Loading: React.FC<Props> = ({onLoadingComplete}) => {
   const [loading, setLoading] = useState(true);
+  const [none, setNone] = useState(false);
   const [loadingText, setLoadingText] = useState("Loading");
 
   useEffect(()=>{
@@ -13,6 +14,9 @@ export const Loading: React.FC<Props> = ({onLoadingComplete}) => {
     setTimeout(()=>{
       setLoading(false)
       onLoadingComplete(false)
+        setTimeout(()=>{
+          setNone(true)
+        },300)
     },2000)
 
     // loading animation
@@ -31,7 +35,7 @@ export const Loading: React.FC<Props> = ({onLoadingComplete}) => {
   
   return (
     <>
-    <div className={`container-load ${!loading ? 'hidden': ''}`}>
+    <div className={`container-load ${!loading && none ? 'hidden' : ''}`}>
       <div className="row-load">
         <div className="loading"> {loadingText} </div>
       </div>
