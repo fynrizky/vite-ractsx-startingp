@@ -12,7 +12,7 @@
   align-items: center;
   justify-content: center;
   transition: opacity .5s ease-out;
-  opacity: 0.5;
+  /* opacity: 0.5; */
   z-index: 1;
 }
 
@@ -31,7 +31,7 @@
 
 .content{
   position: relative;
-  transition: opacity .8s ease-in;
+  transition: opacity 1s ease-in;
   font-size: 20px;
   z-index: 1;
 

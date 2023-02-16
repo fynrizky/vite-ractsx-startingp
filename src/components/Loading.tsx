@@ -14,8 +14,8 @@ export const Loading: React.FC<Props> = ({onLoadingComplete}) => {
       setLoading(false)
       onLoadingComplete(false)
         setTimeout(()=>{
-          setLoading(loading)
-        },300)
+          setLoading(false)
+        },200)
     },2000)
 
     // loading animation
@@ -33,6 +33,7 @@ export const Loading: React.FC<Props> = ({onLoadingComplete}) => {
   }, [loadingText])
   
   return (
+    //nilai !loading adalah false tidak sama dengan  loading  true
     <>
     <div className={`container-load ${!loading != loading ? '': 'hidden'}`}>
       <div className="row-load">
