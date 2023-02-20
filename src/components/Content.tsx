@@ -12,7 +12,7 @@ const Content = ({loading} : Props) => {
   // useEffect(()=>{});
   return (
     <>
-    <div className='content' style={{ opacity: loading ? 0 : 1, zIndex: !loading ? '' : '-1'}}>
+    <div className='content' style={{ opacity: loading ? 0 : 1, zIndex: !loading ? '1' : ''}}>
         <Home />
         <About />
       </div>
