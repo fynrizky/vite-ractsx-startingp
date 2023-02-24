@@ -18,7 +18,7 @@ export const Skills: React.FC = () => {
         centerMode: true,
         infinite: true,
         autoplay: true,
-        autoplaySpeed : 2000,
+        autoplaySpeed : 3000,
         centerPadding: "20px",
         slidesToShow: 3,
         speed: 500,
@@ -37,7 +37,7 @@ export const Skills: React.FC = () => {
       return (
         <div className="skills my-20">
           <h2 >Services</h2>
-          <Slider {...settings} className="relative flex mx-auto my-8 w-4/12 max-sm:w-4/6" >
+          <Slider {...settings} className=" relative mx-auto my-12 w-4/12 max-sm:w-4/6" >
           {skillItems.map((item) => (
           <div key={item.id}>
           
