@@ -8,6 +8,8 @@ import Rjs from './images/react.svg';
 import Sass from './images/sass-1.svg';
 import Tailwind from './images/tailwind-css.svg';
 import Mysql from './images/mysql-4.svg';
+import Firebase from './images/firebase-1.svg';
+import Golang from './images/golang.svg'
 
 
 export const Skills: React.FC = () => {
@@ -32,6 +34,8 @@ export const Skills: React.FC = () => {
         {id: "4", number: Sass, className: currentImg === 3 ? ' active' : '' },
         {id: "5", number: Tailwind, className: currentImg === 4 ? ' active' : '' },
         {id: "6", number: Mysql, className: currentImg === 5 ? ' active ' : '' },
+        {id: "7", number: Firebase, className: currentImg === 6 ? ' active ' : '' },
+        {id: "8", number: Golang, className: currentImg === 7 ? ' active ' : '' },
       ];
 
       return (
