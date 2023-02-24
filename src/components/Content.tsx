@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react'
-import { About } from './pages/About';
-import { Home } from './pages/Home';
+
 import { Header } from './pages/Header';
+import Slideshow from './pages/Slideshow';
+import { Home } from './pages/Home';
+import { About } from './pages/About';
 
 interface Props {
     loading: boolean;
@@ -9,14 +11,21 @@ interface Props {
 
 
 const Content = ({loading} : Props) => {
-  // const [,] =useState();
-  // useEffect(()=>{});
+  const slides = [
+    {
+      content : (<Home />),
+    },
+    {
+      content : (<About/>)
+    }
+  ];
   return (
     <>
     <div className='content' style={{ opacity: loading ? 0 : 1, zIndex: !loading ? '1' : ''}}>
         <Header />
-        <Home />
-        <About />
+        <Slideshow slides={slides} />
+        {/* <Home /> */}
+        {/* <About /> */}
       </div>
     </>
   )
