@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { About } from './pages/About';
 import { Home } from './pages/Home';
+import { Header } from './pages/Header';
 
 interface Props {
     loading: boolean;
@@ -13,6 +14,7 @@ const Content = ({loading} : Props) => {
   return (
     <>
     <div className='content' style={{ opacity: loading ? 0 : 1, zIndex: !loading ? '1' : ''}}>
+        <Header />
         <Home />
         <About />
       </div>
