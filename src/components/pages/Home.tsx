@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Cursor, useTypewriter } from 'react-simple-typewriter';
 import myImg from "../../assets/img/mikey.jpg";
+import { Skills } from './Skills';
 
 
 export const Home: React.FC = () => {
@@ -28,6 +29,7 @@ const [text, count] = useTypewriter({
         <div className='text-center text-3xl'>
             <span>{text}</span>
             <Cursor cursorColor={`inherit`} cursorBlinking={true} />
+            <Skills />
         </div>
       </div>
     </div>

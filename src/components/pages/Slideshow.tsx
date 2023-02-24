@@ -44,7 +44,7 @@ const Slideshow = ({ slides }: SlideshowProps) => {
       <AnimatePresence exitBeforeEnter initial={false} >
         <motion.div
           key={currentSlide}
-          className='slide-wrapper relative -z-10'
+          className='slide-wrapper'
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}

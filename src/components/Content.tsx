@@ -4,6 +4,7 @@ import { Header } from './pages/Header';
 import Slideshow from './pages/Slideshow';
 import { Home } from './pages/Home';
 import { About } from './pages/About';
+import { Contact } from './pages/Contact';
 
 interface Props {
     loading: boolean;
@@ -17,6 +18,9 @@ const Content = ({loading} : Props) => {
     },
     {
       content : (<About/>)
+    },
+    {
+      content : (<Contact />)
     }
   ];
   return (

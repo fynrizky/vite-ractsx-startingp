@@ -1,5 +1,4 @@
 import React from 'react';
-
 interface SlideProps {
   content: React.ReactNode;
   // className: string;
