@@ -18,6 +18,7 @@ export const Skills: React.FC = () => {
     const settings = {
         className: "center",
         centerMode: true,
+        arrows: false,
         infinite: true,
         autoplay: true,
         autoplaySpeed : 3000,
@@ -52,6 +53,11 @@ export const Skills: React.FC = () => {
           </div>
           ))}
           </Slider>
+          <style>{`
+            .slick-arrow {
+              display: none;
+            }
+          `}</style>
         </div>
       );
 }
