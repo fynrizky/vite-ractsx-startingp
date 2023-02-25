@@ -9,6 +9,7 @@ import Sass from './images/sass-1.svg';
 import Tailwind from './images/tailwind-css.svg';
 import Mysql from './images/mysql-4.svg';
 import Firebase from './images/firebase-1.svg';
+import Golang from './images/golang.svg';
 
 
 export const Skills: React.FC = () => {
@@ -27,25 +28,29 @@ export const Skills: React.FC = () => {
       };
 
       const skillItems = [
-        {id: "1", number: Php, className: currentImg === 0 ? ' active' : '' },
-        {id: "2", number: Javascript, className: currentImg === 1 ? ' active' : '' },
-        {id: "3", number: Rjs, className: currentImg === 2 ? ' active' : '' },
-        {id: "4", number: Sass, className: currentImg === 3 ? ' active' : '' },
-        {id: "5", number: Tailwind, className: currentImg === 4 ? ' active' : '' },
-        {id: "6", number: Mysql, className: currentImg === 5 ? ' active ' : '' },
-        {id: "7", number: Firebase, className: currentImg === 6 ? ' active ' : '' },
+        {id: "1", name: 'PHP', number: Php, className: currentImg === 0 ? ' active ' : 'blur-sm' },
+        {id: "2", name: 'JS', number: Javascript, className: currentImg === 1 ? ' active ' : 'blur-sm' },
+        {id: "3", name: 'ReactJS', number: Rjs, className: currentImg === 2 ? ' active ': 'blur-sm' },
+        {id: "4", name: 'SCSS', number: Sass, className: currentImg === 3 ? ' active ' : 'blur-sm' },
+        {id: "5", name: 'Tailwind', number: Tailwind, className: currentImg === 4 ? ' active' : 'blur-sm' },
+        {id: "6", name: 'Mysql', number: Mysql, className: currentImg === 5 ? ' active' : 'blur-sm' },
+        {id: "7", name: 'Firebase', number: Firebase, className: currentImg === 6 ? 'active ': 'blur-sm' },
+        {id: "8", name: 'Go-lang', number: Golang, className: currentImg === 7 ? ' active ': 'blur-sm' },
       ];
 
       return (
         <div className="skills my-20">
           <h2 >Services</h2>
-          <Slider {...settings} className=" relative mx-auto my-12 w-4/12 max-sm:w-4/6" >
+          {skillItems[currentImg] && (
+            <h5 className="text-center text-sm">{skillItems[currentImg].name}</h5>
+          )}
+          <Slider {...settings} className=" relative mx-auto  my-12 max-sm:my-2 w-4/12 max-sm:w-9/12" >
           {skillItems.map((item) => (
-          <div key={item.id}>
+            <div key={item.id}>
           
-            <img src={`${item.number}`} className={`text-slate-300 ${item.className}  w-1/4 h-2/4 max-sm:w-2/4 my-8 mx-auto transition duration-300 ease-in-out hover:text-white`} />
+            <img src={`${item.number}`} className={`${item.className} px-5 w-3/4 h-3/4 max-sm:h-3/4 max-sm:w-3/4 my-8 mx-auto max-sm:px-[12px] transition duration-300 ease-in-out`} />
           </div>
-        ))}
+          ))}
           </Slider>
         </div>
       );
