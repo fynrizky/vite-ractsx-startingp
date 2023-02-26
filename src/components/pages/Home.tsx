@@ -8,9 +8,10 @@ export const Home: React.FC = () => {
 const [title, setTitle] = useState("Rizky Fiyannur");
 const [text, count] = useTypewriter({
   words : [
-    "Hi, the name Rizky", 
-    "I'm web develop", 
-    "Front-end Javascript",
+    "Hi, I'm Rizky", 
+    "I'm a web develop", 
+    "Front-end",
+    "Javascript",
   ],
   loop: true,
   delaySpeed: 2000,
@@ -26,7 +27,7 @@ const [text, count] = useTypewriter({
           <a href="#about"> { (setTitle) ? title : ''} </a>
         </div>
         <img src={myImg} className="border-4 my-8 max-sm:my-8 border-zinc-500 w-32 mx-auto p-1 rounded-full" alt="Avatar" />
-        <div className='text-center text-3xl'>
+        <div className='text-center text-2xl'>
             <span>{text}</span>
             <Cursor cursorColor={`inherit`} cursorBlinking={true} />
             <Skills />
