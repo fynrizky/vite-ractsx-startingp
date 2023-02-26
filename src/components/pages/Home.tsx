@@ -22,11 +22,11 @@ const [text, count] = useTypewriter({
   return (
     <>
     <div id='home' className='menu bg-neutral-900 '>
-      <div className='row-menu mt-4 max-sm:mt-20 text-zinc-300 w-9/12 '>
+      <div className='row-menu my-4 max-sm:mt-20 text-zinc-300 w-9/12 '>
         <div className='text-center'>
           <a href="#about"> { (setTitle) ? title : ''} </a>
         </div>
-        <img src={myImg} className="border-4 my-8 max-sm:my-8 border-zinc-500 w-32 mx-auto p-1 rounded-full" alt="Avatar" />
+        <img src={myImg} className="border-4 my-8 max-sm:my-8 border-zinc-500 w-72 mx-auto p-1 rounded-full" alt="Avatar" />
         <div className='text-center text-2xl'>
             <span>{text}</span>
             <Cursor cursorColor={`inherit`} cursorBlinking={true} />
