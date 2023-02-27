@@ -26,9 +26,9 @@ const [text, count] = useTypewriter({
         <div className='text-center'>
           <a href="#about"> { (setTitle) ? title : ''} </a>
         </div>
-        <img src={myImg} className="border-4 my-8 max-sm:my-8 border-zinc-500 w-72 mx-auto p-1 rounded-full" alt="Avatar" />
+        <img src={myImg} className="border-4 my-8 max-sm:my-8 border-zinc-500 w-44 mx-auto p-1 rounded-full" alt="Avatar" />
         <div className='text-center text-2xl'>
-            <span>{text}</span>
+            <span>{count ? text : ''}</span>
             <Cursor cursorColor={`inherit`} cursorBlinking={true} />
             <Skills />
         </div>
